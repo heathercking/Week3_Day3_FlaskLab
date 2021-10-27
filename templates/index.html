@@ -7,7 +7,7 @@
         {% for order in orders %}
         <div>
             <p>
-                <b>{{ order.order_number }}:</b> {{ order.customer_name }}
+                <a href="{{ url_for('orders') }}"><b>{{ order.order_number }}:</b></a> {{ order.customer_name }}
                 <br>
                 Order date: {{ order.order_date }} Quantity: {{ order.quantity }} Cake: {{ order.cake }} 
             </p>
