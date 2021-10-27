@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>{{ title }} - Cake Shop Order List</title>
+    </head>
+    <body>
+        <h1>Cake Shop Order List</h1>
+        {% for order in orders %}
+        <div>
+            <p>
+                <b>{{ order.order_number }}:</b> {{ order.customer_name }}
+                <br>
+                Order date: {{ order.order_date }} Quantity: {{ order.quantity }} Cake: {{ order.cake }} 
+            </p>
+        </div>
+        {% endfor %}
+    </body>
+</html>
