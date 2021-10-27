@@ -1,0 +1,49 @@
+*,
+*::before
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+} 
+
+
+.order-page {
+    margin: auto;
+    width: 90%;
+    text-align: left;
+    background-color: #490B3D;
+}
+
+.order-page h1 {
+    text-align: left;
+    margin: 10px;
+}
+
+.order-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 80vw;
+    background-color: white;
+    padding: 10px;
+    margin: 20px;
+
+}
+
+.order-title {
+    font-size: 18px;
+    font-weight: bold;
+    /* line-height: 2; */
+}

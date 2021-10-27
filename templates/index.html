@@ -1,17 +1,44 @@
 <html>
     <head>
         <title>{{ title }} - Cake Shop Order List</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='current-orders.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
     </head>
+   
     <body>
-        <h1>Cake Shop Order List</h1>
-        {% for order in orders %}
-        <div>
-            <p>
-                <a href="{{ url_for('orders') }}"><b>{{ order.order_number }}:</b></a> {{ order.customer_name }}
-                <br>
-                Order date: {{ order.order_date }} Quantity: {{ order.quantity }} Cake: {{ order.cake }} 
-            </p>
-        </div>
-        {% endfor %}
+
+        <header>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="/orders" class="logo">The Cake Shop</a></li>
+                    <li><a href="/orders">Home</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <hgroup>
+            <h1>Live Orders</h1>
+            <br>
+        </hgroup>
+
+        <section id="current-orders">
+                <div class="order-container">
+                    {% for order in orders %}
+                    <div class="order">
+                        <p>
+                            <a class="order-title" href="/orders/{{ (orders.index(order))-1 }}"><b>Order {{ order.order_number }}:  </b>{{ order.customer_name }}</a> 
+                            <br>
+                            Order date: {{ order.order_date }}<br>
+                            Quantity: {{ order.quantity }}<br>
+                            Cake: {{ order.cake }} 
+                        </p>
+                    </div>
+                    {% endfor %}
+                </div>
+        <section>
+
     </body>
+
 </html>

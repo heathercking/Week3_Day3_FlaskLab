@@ -1,0 +1,56 @@
+*,
+*::before
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+}  
+
+.main-nav {
+    display: flex;
+    background-color:white;
+    align-items: center;
+    font-family: "Quicksand";
+    font-size: 20px;
+    margin-right: 10px;
+    border-bottom: 0.5px solid #dedede;
+}
+
+.main-nav li:first-child {
+    margin-right: auto;
+}
+
+.main-nav li {
+    list-style: none;
+
+}
+
+.main-nav a {
+    margin: 10px;
+    border-radius: 5px;
+    background: white;
+    color:black;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.main-nav .logo {
+    background: white;
+    font-size: 40px;
+    margin: 0px;
+    color: #BD1E51;
+}
+
+
+h1 {
+    margin: auto;
+    width: 90%;
+    font-family: "Quicksand";
+    font-size: 30px;
+}

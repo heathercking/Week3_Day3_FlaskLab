@@ -1,15 +1,40 @@
 <html>
+    
     <head>
         <title>{{ order.order_number }} - {{ order.customer_name }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='current-orders.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='order.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
     </head>
+   
     <body>
-        <h1>Order</h1>
-        <div>
-            <p>
-                <b>{{ order.order_number }}:</b> {{ order.customer_name }}
-                <br>
-                Order date: {{ order.order_date }} Quantity: {{ order.quantity }} Cake: {{ order.cake }} 
-            </p>
+
+        <header>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="/orders" class="logo">The Cake Shop</a></li>
+                    <li><a href="/orders">Home</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <hgroup>
+            <h1>Order page</h1>
+            <br>
+        </hgroup>
+
+        <div class="order-page"> 
+            <div class="order-container">
+                <p class="order">
+                    <b>{{ order.order_number }}:</b> {{ order.customer_name }}<br>
+                    Order date: {{ order.order_date }} <br>
+                    Quantity: {{ order.quantity }} <br>
+                    Cake: {{ order.cake }} <br>
+                </p>
+            </div>
         </div>
     </body>
+
 </html>
