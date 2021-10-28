@@ -8,7 +8,7 @@ def index():
 
 @app.route('/orders/<index>')
 def order(index):
-    return render_template('order.html', order = orders[int(index)-1])
+    return render_template('order.html', order = orders[int(index)])
 
 @app.route('/orders/1')
 def order_1():

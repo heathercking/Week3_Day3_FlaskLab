@@ -7,38 +7,38 @@
     </head>
    
     <body>
+        <div id="grid-container">
+            <header>
+                <nav>
+                    <ul class="main-nav">
+                        <li><a href="/orders" class="logo">The Cake Shop</a></li>
+                        <li><a href="/orders">Home</a></li>
+                        <li><a href="orders.html">Orders</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-        <header>
-            <nav>
-                <ul class="main-nav">
-                    <li><a href="/orders" class="logo">The Cake Shop</a></li>
-                    <li><a href="/orders">Home</a></li>
-                    <li><a href="orders.html">Orders</a></li>
-                </ul>
-            </nav>
-        </header>
+            <hgroup>
+                <h1>Live Orders</h1>
+                <br>
+            </hgroup>
 
-        <hgroup>
-            <h1>Live Orders</h1>
-            <br>
-        </hgroup>
-
-        <section id="current-orders">
-                <div class="order-container">
-                    {% for order in orders %}
-                    <div class="order">
-                        <p>
-                            <a class="order-title" href="/orders/{{ (orders.index(order))-1 }}"><b>Order {{ order.order_number }}:  </b>{{ order.customer_name }}</a> 
-                            <br>
-                            Order date: {{ order.order_date }}<br>
-                            Quantity: {{ order.quantity }}<br>
-                            Cake: {{ order.cake }} 
-                        </p>
+            <section id="current-orders">
+                    <div class="order-container">
+                        {% for order in orders %}
+                        <div class="order">
+                            <p>
+                                <a class="order-title" href="/orders/{{ (orders.index(order)) }}"><b>Order {{ order.order_number }}:  </b>{{ order.customer_name }}</a> 
+                                <br>
+                                Order date: {{ order.order_date }}<br>
+                                Quantity: {{ order.quantity }}<br>
+                                Cake: {{ order.cake }} 
+                            </p>
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                </div>
-        <section>
-
+            <section>
+        </div>
     </body>
 
 </html>

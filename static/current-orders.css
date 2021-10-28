@@ -16,6 +16,7 @@ html {
     width: 90%;
     text-align: left;
     background-color: #490B3D;
+    grid-area: main;
 
 }
 
